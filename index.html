@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Ritorno dalla banca</title>
+<style>body{font-family:system-ui,sans-serif;margin:3rem auto;max-width:32rem;padding:0 1rem;color:#1f5c4a}</style>
+</head>
+<body>
+<p>Ritorno a Conti Casa Studio…</p>
+<p><small>Se non succede niente, l'app deve essere aperta su questo PC.</small></p>
+<script>
+// Pagina di rimbalzo per Enable Banking: la banca rimanda qui (serve un indirizzo pubblico https) e la
+// pagina passa subito codice e stato all'app sul PC. Il codice da solo non serve: per usarlo ci vuole la
+// chiave privata che sta solo sul PC. Qui non si salva e non si invia niente a nessuno.
+location.replace("http://127.0.0.1:8110/banche/collegamento" + location.search);
+</script>
+</body>
+</html>
