@@ -9,12 +9,12 @@
 </head>
 <body>
 <p>Ritorno a Conti Casa Studio…</p>
-<p><small>Se non succede niente, l'app deve essere aperta su questo PC.</small></p>
+<p><small>Se non succede niente: il dispositivo deve essere collegato a Tailscale (l'app gira sul Raspberry Pi).</small></p>
 <script>
 // Pagina di rimbalzo per Enable Banking: la banca rimanda qui (serve un indirizzo pubblico https) e la
-// pagina passa subito codice e stato all'app sul PC. Il codice da solo non serve: per usarlo ci vuole la
-// chiave privata che sta solo sul PC. Qui non si salva e non si invia niente a nessuno.
-location.replace("http://127.0.0.1:8110/banche/collegamento" + location.search);
+// pagina passa subito codice e stato all'app sul Raspberry Pi (via Tailscale). Il codice da solo non serve:
+// per usarlo ci vuole la chiave privata che sta solo sul Pi. Qui non si salva e non si invia niente a nessuno.
+location.replace("http://100.76.84.121:8113/banche/collegamento" + location.search);
 </script>
 </body>
 </html>
